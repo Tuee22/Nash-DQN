@@ -19,4 +19,5 @@ COPY Pipfile Pipfile.lock /work/
 RUN pipenv sync --dev
 
 # displays proof of contact with host GPUs
-CMD nvidia-smi
+RUN mkdir -p /work/notebooks
+CMD pipenv run jupyter lab --no-browser --allow-root --LabApp.token='' --ip 0.0.0.0 --port 8888 /work/notebooks

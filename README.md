@@ -11,3 +11,9 @@ To train network based on default parameters:
 - Open file "Visualization.ipynb"
 - Change variable net_file_name to the designated file name of Action Network
 - Run all cells to generate plots
+
+MN: to run in a container type:
+```bash
+docker build -t nash .
+docker run --runtime=nvidia --rm -it -p 8000:8000 -v ./Nash DQN - Final:/work/notebooks nash
+```
