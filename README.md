@@ -15,5 +15,5 @@ To train network based on default parameters:
 MN: to run in a container type:
 ```bash
 docker build -t nash .
-docker run --runtime=nvidia --rm -it -p 8000:8000 -v ./Nash DQN - Final:/work/notebooks nash
+docker run --runtime=nvidia --rm -it -p 8888:8888 -v ~/Nash-DQN/Nash\ DQN\ -\ Final/:/work/notebooks/ nash
 ```
